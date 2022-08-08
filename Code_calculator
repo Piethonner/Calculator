@@ -1,4 +1,4 @@
-#More advanced calculator - to perform calculations multiple times, or clean and perform a new one
+#More "advanced" calculator - to perform calculations multiple times, or clean and perform a new one
 
 #Add
 def add(a, b):
