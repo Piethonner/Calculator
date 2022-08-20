@@ -1,26 +1,30 @@
-#More "advanced" calculator - to perform calculations multiple times, or clean and perform a new one
+# More "advanced" calculator - to perform calculations multiple times, or clean and perform a new one
 
-#Add
+# Add
 def add(a, b):
-    return a+b
-    
-#Subtract
+    return a + b
+
+
+# Subtract
 def subtract(a, b):
-    return a-b
-    
-#Multiply
+    return a - b
+
+
+# Multiply
 def multiply(a, b):
-    return a*b
-    
-#Divide
+    return a * b
+
+
+# Divide
 def divide(a, b):
-    return a/b
+    return a / b
+
 
 operations = {
-"+": add,
-"-": subtract,
-"*": multiply,
-"/": divide   
+    "+": add,
+    "-": subtract,
+    "*": multiply,
+    "/": divide
 }
 
 
@@ -29,19 +33,20 @@ def calculations():
     for symbol in operations:
         print(symbol)
     calculator = True
-    
-    while calculator == True:
+
+    while calculator:
         operation_symbol = input("Which operation do you want to perform?: ")
         num2 = float(input("What's the next number?: "))
         calculation_function = operations[operation_symbol]
         answer = calculation_function(num1, num2)
 
         print(f"{num1} {operation_symbol} {num2} = {answer}")
-        
+
         if input(f"Type 'y' to continue calculating with {answer}, or 'n' to restart calculator: ") == "y":
             num1 = answer
         else:
             calculator = False
             calculations()
-            
+
+
 calculations()
